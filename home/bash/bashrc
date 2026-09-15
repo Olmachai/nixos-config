@@ -1,0 +1,27 @@
+
+
+# Commands that should be applied only for interactive shells.
+[[ $- == *i* ]] || return
+
+HISTFILESIZE=100000
+HISTSIZE=10000
+
+shopt -s histappend
+shopt -s extglob
+shopt -s globstar
+shopt -s checkjobs
+
+alias -- ..='cd ..'
+alias -- ll='eza --icons -l'
+alias -- ls='eza --icons'
+alias -- wgdown='sudo wg-quick down ~/.config/wg-quick/wg0.conf'
+alias -- wgup='sudo wg-quick up ~/.config/wg-quick/wg0.conf'
+
+if [[ ! -v BASH_COMPLETION_VERSINFO ]]; then
+  . "/nix/store/8z4ss3bnpvgg3rvkcyj4v4ss1p2cy8jg-bash-completion-2.18.0/etc/profile.d/bash_completion.sh"
+fi
+
+if [[ $TERM != "dumb" ]]; then
+  eval "$(/nix/store/3wdc01px7pmymg4ry03gfgkm75phyd45-starship-1.26.0/bin/starship init bash --print-full-init)"
+fi
+
