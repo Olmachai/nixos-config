@@ -103,23 +103,32 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
 corner_radius_scale = 0.0
 font_family = "ZedMono Nerd Font"
 
+    [shell.launcher]
+    app_grid = false
+    categories = false
+    compact = false
+    show_app_actions = false
+    show_icons = false
+
     [shell.screenshot]
     directory = "~/Pictures/Screenshots"
 
 [theme]
-builtin = "Kanagawa"
+builtin = "Gruvbox"
+mode = "dark"
+source = "builtin"
 
     [theme.templates]
     builtin_ids = [ "alacritty", "btop", "gtk3", "kcolorscheme", "qt", "sway" ]
 
 [wallpaper.default]
-path = "/home/olma/Pictures/Wallpapers/brown_city_planet_w.jpg"
+path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"
 
 [wallpaper.last]
-path = "/home/olma/Pictures/Wallpapers/brown_city_planet_w.jpg"
+path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/olma/Pictures/Wallpapers/brown_city_planet_w.jpg"
+path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"
 
 [widget.network]
 show_label = false
