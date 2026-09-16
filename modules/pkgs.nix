@@ -1,7 +1,7 @@
 { pkgs, config, ... }: {
 
   environment.systemPackages = with pkgs; [ 
-   #zapret2 ts f'd up.
+    ristretto
     opencode
     pciutils
     bat
@@ -40,6 +40,7 @@
     firefox
     oculante
     obs-studio
+    virtualbox
   ];
 
      # This expression sets necessary system options for steam to work properly.
