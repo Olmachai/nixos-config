@@ -11,6 +11,47 @@ radius = 0
 scale = 1.2500000111758709
 start = [ "wallpaper", "workspaces", "media" ]
 
+[desktop_widgets]
+schema_version = 2
+widget_order = [ "desktop-widget-0000000000000001" ]
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 0.0
+    box_width = 0.0
+    cx = 124.0
+    cy = 1002.5
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "sysmon"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = true
+        background_color = "surface"
+        background_opacity = 0.0
+        background_padding = 10
+        background_radius = 12
+        color = "primary"
+        color2 = "secondary"
+        display = "graph"
+        font_family = ""
+        gauge_layout = "horizontal"
+        highlight_color = "error"
+        interface = ""
+        label_min_width = 0
+        network_speed_compact = false
+        network_speed_unit = "auto"
+        shadow = true
+        show_label = true
+        stat = "cpu_usage"
+        stat2 = "cpu_temp"
+
 [dock]
 auto_hide = true
 background_opacity = 0.0
@@ -62,6 +103,9 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
 corner_radius_scale = 0.0
 font_family = "ZedMono Nerd Font"
 
+    [shell.screenshot]
+    directory = "~/Pictures/Screenshots"
+
 [theme]
 builtin = "Kanagawa"
 
@@ -79,6 +123,3 @@ path = "/home/olma/Pictures/Wallpapers/brown_city_planet_w.jpg"
 
 [widget.network]
 show_label = false
-
-[shell.screenshot]
-directory = "~/Pictures/Screenshots"

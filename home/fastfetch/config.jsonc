@@ -71,14 +71,16 @@
     "keyColor": "blue"
     },
     {
-    "type": "host",
+    "type": "custom",
     "key": "󰌢 SYSTEM",
-    "keyColor": "green"
+    "keyColor": "green",
+    "format": "HP Victus"
     },
     {
-    "type": "cpu",
+    "type": "custom",
     "key": "│ ├󰻠",
-    "keyColor": "green"
+    "keyColor": "green",
+    "format": "Intel i7-14700HX"
     },
     {
     "type": "gpu",
