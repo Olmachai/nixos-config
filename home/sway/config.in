@@ -192,4 +192,5 @@ bindsym --locked $mod+s exec $ipc screenshot-fullscreen
 include /etc/sway/config.d/*
 
 
+
 include ~/.config/sway/noctalia

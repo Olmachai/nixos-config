@@ -11,7 +11,7 @@
     ./home/alacritty/alacritty.nix
     ./home/sway/sway.nix
     ./home/kdeglobals/kdeglobals.nix
-#    ./home/noctalia/noctalia.nix
+    ./home/noctalia/noctalia.nix
   ];
 
 
