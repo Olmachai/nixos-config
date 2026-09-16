@@ -21,23 +21,23 @@
   #Screensharing (needs pipewire too)
   #Tip: Make sure that you do not have conflicting definitions for xdg.portal in Home Manager.  
   #App and reigon recording doesn't work 
-  xdg = {
-    portal = {
+  xdg.portal = {
+    enable = true;
+    wlr = {
       enable = true;
-      wlr = {
-        enable = true;
-        settings = {
-          screencast = {
-            chooser_type = "simple";
-            chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
-          };
-        };
-      };
-      extraPortals = [
-        pkgs.xdg-desktop-portal-gtk
-      ];
+      settings = {
+        screencast = {
+             chooser_type = "simple";
+             chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o'";
+           };
+       };
+    };
+    config.sway = {
+      "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
+      "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
     };
   };
+
   security.rtkit.enable = true;
 
    environment.systemPackages = with pkgs; [

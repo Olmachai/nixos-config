@@ -9,7 +9,7 @@ end = [ "tray", "notifications", "clipboard", "network", "bluetooth", "battery",
 margin_ends = 0
 radius = 0
 scale = 1.2500000111758709
-start = [ "wallpaper", "workspaces", "media" ]
+start = [ "wallpaper", "workspaces", "media", "audio_visualizer" ]
 
 [desktop_widgets]
 schema_version = 2
