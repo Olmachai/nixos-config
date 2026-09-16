@@ -3,7 +3,6 @@
 {
   home.username = "olma";
   home.homeDirectory = "/home/olma";
-  #home.file.".config/fontconfig/conf.d/10-hm-fonts.conf".force = true;   
   
   imports = [
     ./home/fastfetch/fastfetch.nix

@@ -1,85 +1,121 @@
+
 {
-  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
-  "display": {
-    "key": {
-      "width": 10
-    },
-    "separator": ""
-  },
-  "logo": {
-    "type": "auto",
-    "source": "~/.config/fastfetch/ascii/olmadevil.txt",
-    "color": {
-      "1": "#ccccff",
-      "2": "#c6d2ff",
-      "3": "#c1d7ff",
-      "4": "#bedcff",
-      "5": "#bde0fe"
-    },
-    "padding": {
-      "top": 2,
-      "left": 1
-    }
-  },
-  "modules": [
+"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+"logo": {
+"type": "auto",
+"source": "~/.config/fastfetch/ascii/olmalarry.txt",
+"padding": {
+"top": 6  
+}
+},
+"display": {
+"separator": " 󰑃  "
+},
+"modules": [
     "break",
     {
-      "type": "command",
-      "key": "󰀄 USER",
-      "keyColor": "#ccccff",
-      "text": "echo $USER@$(hostnamectl hostname)"
+    "type": "os",
+    "key": " DISTRO",
+    "keyColor": "yellow"
     },
     {
-      "type": "os",
-      "key": "󰣇 OS",
-      "keyColor": "#c9cfff",
-      "format": "{name} {version-id}"
+    "type": "kernel",
+    "key": "│ ├",
+    "keyColor": "yellow"
     },
     {
-      "type": "kernel",
-      "key": "󰌽 KER",
-      "keyColor": "#c6d2ff"
+    "type": "packages",
+    "key": "│ ├󰏖",
+    "keyColor": "yellow"
     },
     {
-      "type": "packages",
-      "key": "󰏗 PKG",
-      "keyColor": "#c4d4ff",
-      "format": "{all}"
+    "type": "command",
+    "key": "│ ├",
+    "keyColor": "yellow",
+    "text": "birth_install=$(stat -c %W / 2>/dev/null || stat -f %B / 2>/dev/null || echo 0); case $birth_install in ''|0|-1) echo unknown;; *) current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days;; esac"
     },
     {
-      "type": "terminal",
-      "key": "󰆍 TERM",
-      "keyColor": "#c1d7ff",
-      "format": "{pretty-name}"
+    "type": "shell",
+    "key": "│ └",
+    "keyColor": "yellow"
+    },
+
+    {
+    "type": "wm",
+    "key": " DE/WM",
+    "keyColor": "blue"
     },
     {
-      "type": "shell",
-      "key": "󰞷 SH",
-      "keyColor": "#c0d9ff",
-      "format": "{pretty-name}"
+    "type": "wmtheme",
+    "key": "│ ├󰉼",
+    "keyColor": "blue"
     },
     {
-      "type": "uptime",
-      "keyColor": "#bedcff",
-      "key": "󰥔 UP"
+    "type": "icons",
+    "key": "│ ├󰀻",
+    "keyColor": "blue"
     },
     {
-      "type": "memory",
-      "key": "󰍛 RAM",
-      "keyColor": "#bddeff",
-      "format": "{used} / {total} ({percentage})"
+        "type": "cursor",
+        "key": "│ ├",
+        "keyColor": "blue",
     },
     {
-      "type": "disk",
-      "folders": "/",
-      "key": "󰋊 SSD",
-      "keyColor": "#bde0fe",
-      "format": "{size-used} / {size-total} ({size-percentage})"
+        "type": "terminalfont",
+        "key": "│ ├",
+        "keyColor": "blue",
     },
     {
-      "type": "custom",
-      "format": "\u001b[90m \u001b[91m \u001b[92m \u001b[93m \u001b[94m \u001b[95m \u001b[96m \u001b[97m"
+    "type": "terminal",
+    "key": "│ └",
+    "keyColor": "blue"
     },
-    "break"
-  ]
+    {
+    "type": "host",
+    "key": "󰌢 SYSTEM",
+    "keyColor": "green"
+    },
+    {
+    "type": "cpu",
+    "key": "│ ├󰻠",
+    "keyColor": "green"
+    },
+    {
+    "type": "gpu",
+    "key": "│ ├󰻑",
+    "format": "{2}",
+    "keyColor": "green"
+    },
+    {
+    "type": "memory",
+    "key": "│ ├󰾆",
+    "keyColor": "green"
+    },
+    {
+    "type": "uptime",
+    "key": "│ ├󰅐",
+    "keyColor": "green"
+    },
+    {
+    "type": "sound",
+    "key": " AUDIO",
+    "format": "{2}",
+    "keyColor": "magenta"
+    },
+    {
+    "type": "player",
+    "key": "│ ├󰥠",
+    "keyColor": "magenta"
+    },
+    {
+    "type": "media",
+    "key": "│ └󰝚",
+    "keyColor": "magenta"
+    },
+    {
+    "type": "custom",
+    "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m  \u001b[39m    \u001b[38m  \u001b[37m  \u001b[36m  \u001b[35m  \u001b[34m  \u001b[33m  \u001b[32m  \u001b[31m  \u001b[90m "
+    },
+    "break",
+    ]
 }

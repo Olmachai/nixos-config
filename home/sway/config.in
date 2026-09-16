@@ -8,6 +8,7 @@ set $ipc noctalia msg
 set $ws1 󰖟
 set $ws2 
 set $ws3 
+set $filemanager thunar
 
 font pango:ZedMono Nerd Font Bold 11
 
@@ -167,7 +168,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Shift+f exec dolphin
+bindsym $mod+Shift+f exec $filemanager
 
 # Noctalia:
 
