@@ -20,11 +20,26 @@
   
   #Screensharing (needs pipewire too)
   #Tip: Make sure that you do not have conflicting definitions for xdg.portal in Home Manager.  
-  xdg.portal = {
-    enable = true;
-    wlr.enable = true;
+  #App and reigon recording doesn't work 
+  xdg = {
+    portal = {
+      enable = true;
+      wlr = {
+        enable = true;
+        settings = {
+          screencast = {
+            chooser_type = "simple";
+            chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o' -or";
+          };
+        };
+      };
+      extraPortals = [
+        pkgs.xdg-desktop-portal-gtk
+      ];
+    };
   };
-  
+  security.rtkit.enable = true;
+
    environment.systemPackages = with pkgs; [
    #wl-clipboard
    #waypaper # Wallpaper selector.
@@ -42,6 +57,7 @@
    gruvbox-gtk-theme #set icon theme in nwg-look.
    gruvbox-dark-icons-gtk
    kanagawa-icon-theme
+   slurp
  ];
 
   programs.xfconf.enable = true; #saves prefrences of thunar if not on xfce.
