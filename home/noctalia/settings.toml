@@ -99,6 +99,9 @@ widget_order = [ "lockscreen-login-box@eDP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[osd.kinds]
+media = false
+
 [shell]
 corner_radius_scale = 0.0
 font_family = "ZedMono Nerd Font"
