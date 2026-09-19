@@ -115,6 +115,7 @@ font_family = "ZedMono Nerd Font"
 
     [shell.screenshot]
     directory = "~/Pictures/Screenshots"
+    filename_pattern     = "%Y-%m-%d"
 
 [theme]
 builtin = "Gruvbox"

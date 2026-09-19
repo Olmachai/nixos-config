@@ -10,6 +10,10 @@ set $ws2 
 set $ws3 
 set $filemanager thunar
 
+### Window Rules
+for_window [title="Noctalia Settings"] floating enable;
+for_window [title="Thunar"] floating enable;
+
 font pango:ZedMono Nerd Font Bold 11
 
 gaps inner 10
@@ -30,6 +34,13 @@ input type:touchpad {
 input type:keyboard {
       xkb_layout "tr"
   }
+
+bindgesture swipe:3:left workspace next
+bindgesture swipe:3:right workspace prev
+
+# bindgesture swipe:4:left workspace next; move container workspace next
+# bindgesture swipe:4:right workspace prev; move container workspace prev
+
 
 ### Key bindings
 

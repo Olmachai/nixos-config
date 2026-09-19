@@ -1,4 +1,4 @@
-{ pkgs, config, ... }: {
+{ pkgs, config, inputs, ... }: {
 
   environment.systemPackages = with pkgs; [ 
     ristretto
@@ -11,7 +11,7 @@
     prismlauncher
     vlc
     yt-dlp
-    #davinci-resolve # the devs need to update the hash.
+    #davinci-resolve
     docker
     docker-compose
     lutris
@@ -41,11 +41,13 @@
     oculante
     obs-studio
     virtualbox
+    digikam
+    lmstudio
   ];
 
      # This expression sets necessary system options for steam to work properly.
   programs.steam = {
     enable = true;
-    };
+  };
    
 }

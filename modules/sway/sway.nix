@@ -23,6 +23,9 @@
   #App and reigon recording doesn't work 
   xdg.portal = {
     enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
     wlr = {
       enable = true;
       settings = {
@@ -33,31 +36,23 @@
        };
     };
     config.sway = {
+      default = [ "gtk" ];
       "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
       "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
+      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];    
     };
+  };
+
+  xdg.mime.defaultApplications = {
+    "inode/directory" = "thunar.desktop";
   };
 
   security.rtkit.enable = true;
 
    environment.systemPackages = with pkgs; [
-   #wl-clipboard
-   #waypaper # Wallpaper selector.
-   
-   #not required by noctalia. 
-   #libsForQt5.qt5ct # qt5 theme manger.
    wlsunset   
-   # setup needed on first install: https://docs.noctalia.dev/noctalia/templates/official/gtk-qt/
-   adw-gtk3
-   nwg-look #GTK theme manager.
-   nwg-icon-picker
-   kdePackages.qt6ct # qt6 theme manger.
-   kdePackages.dolphin
-   pavucontrol
-   gruvbox-gtk-theme #set icon theme in nwg-look.
-   gruvbox-dark-icons-gtk
-   kanagawa-icon-theme
    slurp
+   swaycons
  ];
 
   programs.xfconf.enable = true; #saves prefrences of thunar if not on xfce.

@@ -10,6 +10,14 @@
     enable = true;
   };
 
+  programs.btop = {
+    enable = true;
+    settings = {
+      color_theme = "noctalia";
+      theme_background = false;
+    };
+  };
+
   xdg.configFile."alacritty/alacritty.toml".source = config.lib.file.mkOutOfStoreSymlink alacrittyPath;
   xdg.configFile."alacritty/themes".source = config.lib.file.mkOutOfStoreSymlink themesPath;
 }

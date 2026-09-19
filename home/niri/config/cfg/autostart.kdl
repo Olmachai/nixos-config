@@ -1,0 +1,20 @@
+// ────────────── Named Workspaces ──────────────
+
+	workspace "browser"
+	workspace "comms"
+	
+
+
+
+
+
+
+
+
+
+// ────────────── Startup Applications ──────────────
+	
+	spawn-at-startup "noctalia"
+	spawn-at-startup "firefox"
+//	spawn-at-startup "steam"
+//	spawn-at-startup "vesktop"

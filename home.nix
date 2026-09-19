@@ -12,9 +12,21 @@
     ./home/sway/sway.nix
     ./home/kdeglobals/kdeglobals.nix
     ./home/noctalia/noctalia.nix
+    ./home/niri/niri.nix
   ];
 
+  programs.git = {
+    enable = true;
+    settings = {
+    init.defaultBranch = "main";
+    user = {
+      name = "Olmachai";
+      email = "287800540+Olmachai@users.noreply.github.com";
+      };
+    };
+  };
 
+  
   home.packages = with pkgs; [
   ];
 

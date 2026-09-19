@@ -1,4 +1,4 @@
-{ config, ... }: 
+{ config, pkgs, ... }: 
 
 # state.toml stores changes made through the ui, settings.toml is a "traditional" config file.
 let 

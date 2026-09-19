@@ -8,12 +8,11 @@
       wgdown = "sudo wg-quick down ~/.config/wg-quick/wg0.conf";
       wgup = "sudo wg-quick up ~/.config/wg-quick/wg0.conf";
       ".." = "cd ..";
-      cdrebuild = 
+      nrs = 
         ''
           cd ~/nixos-config
           sudo nixos-rebuild switch --flake .
         '';
-      rebuild = "sudo nixos-rebuild switch --flake .";
     };
   };
 
