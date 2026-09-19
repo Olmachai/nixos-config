@@ -113,6 +113,9 @@ font_family = "ZedMono Nerd Font"
     show_app_actions = false
     show_icons = false
 
+    [shell.panel]
+    transparency_mode = "glass"
+
     [shell.screenshot]
     directory = "~/Pictures/Screenshots"
     filename_pattern = "%Y-%m-%d"

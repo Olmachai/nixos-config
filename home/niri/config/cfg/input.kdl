@@ -14,11 +14,12 @@ input {
     touchpad {
         tap // Enable tap-to-click
         natural-scroll // Enable natural (macOS-style) scrolling
-        scroll-factor 0.3
+        scroll-factor 0.6
     }
 
    // focus-follows-mouse // Automatically focus windows under the mouse pointer
     workspace-auto-back-and-forth // Enable workspace back & forth switching
+
 }
 
 
@@ -26,5 +27,5 @@ input {
 gestures {
    hot-corners {
                  off
-     }
+    }
 }

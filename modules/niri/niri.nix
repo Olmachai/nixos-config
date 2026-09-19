@@ -27,7 +27,11 @@
     xwayland-satellite
     nirimod
   ];
-
+  
+  services.xserver.upscaleDefaultCursor = true;
+  environment.variables = {
+    XCURSOR_SIZE = "24";
+  };
   services.displayManager.defaultSession = "niri";
 }
 
