@@ -115,7 +115,7 @@ font_family = "ZedMono Nerd Font"
 
     [shell.screenshot]
     directory = "~/Pictures/Screenshots"
-    filename_pattern     = "%Y-%m-%d"
+    filename_pattern = "%Y-%m-%d"
 
 [theme]
 builtin = "Gruvbox"
@@ -123,7 +123,7 @@ mode = "dark"
 source = "builtin"
 
     [theme.templates]
-    builtin_ids = [ "alacritty", "btop", "gtk3", "kcolorscheme", "qt", "sway" ]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "kcolorscheme", "niri", "qt", "sway" ]
 
 [wallpaper.default]
 path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"

@@ -12,10 +12,7 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gnome
     ];
-    config.sway = {
-      default = [ "gnome" ];
-      "org.freedesktop.impl.portal.ScreenCast" = [ "gnome" ];
-      "org.freedesktop.impl.portal.Screenshot" = [ "gnome" ];
+    config.niri = {
 #      "org.freedesktop.impl.portal.FileChooser" = [ "gtk" ];  # uncomment if not using nautilus.  
     };
   };
@@ -31,5 +28,6 @@
     nirimod
   ];
 
+  services.displayManager.defaultSession = "niri";
 }
 

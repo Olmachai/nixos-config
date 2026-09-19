@@ -8,8 +8,8 @@
     ./modules/sway/sway.nix
     ./modules/pkgs.nix
     ./modules/users.nix
-    .modules/noctalia/noctalia.nix
-    .modules/niri/niri.nix
+    ./modules/noctalia/noctalia.nix
+    ./modules/niri/niri.nix
   ]; 
 
   programs.nix-ld.enable = true;

@@ -5,8 +5,8 @@ let
 
 in
 {
-  xdg.configFile= {
-    "niri".source = config.lib.file.mkOutOfStoreSymlink conf;
+  xdg.configFile."niri" = {
+    source = config.lib.file.mkOutOfStoreSymlink conf;
     recursive = true;
   };
 }
