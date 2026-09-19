@@ -1,7 +1,7 @@
 	prefer-no-csd
 
 	window-rule {
-		geometry-corner-radius 0 // Set every window radius to 20
+		geometry-corner-radius 0 //
 		clip-to-geometry true
 }
 
@@ -11,7 +11,7 @@
 }
  
 	window-rule {
-		match title="Picture in picture"
+		match title="Picture-in-Picture"
 		open-floating true
 		open-focused false
 		default-window-height { fixed 222; }
@@ -30,14 +30,14 @@
 }
    
    
-	window-rule {
-		match app-id="brave-origin"
-		open-maximized-to-edges true
-		open-on-workspace "browser"
-}
+//	window-rule {
+//		match app-id="firefox"
+//		open-maximized-to-edges true
+//		open-on-workspace "browser"
+//}
 
         window-rule {
-                match app-id="vesktop"
+                match app-id="discord-canary"
                 open-on-workspace "comms"
 
 }
@@ -46,4 +46,9 @@
                 match title="Steam"
                 open-on-workspace "comms"
 		exclude app-id="steam_app_default"
+}
+
+	window-rule {
+		match title="Noctalia Settings"
+		open-floating true
 }

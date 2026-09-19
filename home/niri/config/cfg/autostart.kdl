@@ -16,5 +16,6 @@
 	
 	spawn-at-startup "noctalia"
 	spawn-at-startup "firefox"
-//	spawn-at-startup "steam"
-//	spawn-at-startup "vesktop"
+	spawn-sh-at-startup "steam -system-composer"
+	spawn-at-startup "discord-canary"
+	spawn-sh-at-startup "wgup"

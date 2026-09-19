@@ -123,19 +123,27 @@ font_family = "ZedMono Nerd Font"
 [theme]
 builtin = "Gruvbox"
 mode = "dark"
-source = "builtin"
+source = "wallpaper"
+wallpaper_scheme = "faithful"
 
     [theme.templates]
-    builtin_ids = [ "alacritty", "btop", "gtk3", "kcolorscheme", "niri", "qt", "sway" ]
+    builtin_ids = [ "alacritty", "btop", "gtk3", "kcolorscheme", "niri", "qt", "starship", "sway" ]
 
 [wallpaper.default]
-path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"
+path = "/home/olma/Pictures/Wallpapers/wallhaven-6l5emq.png"
 
 [wallpaper.last]
-path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"
+path = "/home/olma/Pictures/Wallpapers/wallhaven-6l5emq.png"
 
 [wallpaper.monitors.eDP-1]
-path = "/home/olma/Pictures/Wallpapers/after_school_stroll_gruvbox.png"
+path = "/home/olma/Pictures/Wallpapers/wallhaven-6l5emq.png"
+
+[widget.media]
+hide_artist = true
 
 [widget.network]
 show_label = false
+
+[widget.workspaces]
+label_source = "name"
+max_label_chars = 20

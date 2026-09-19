@@ -1,6 +1,6 @@
 { pkgs, config, ... }: let 
 
-  starshipPath = "${config.home.homeDirectory}/nixos-config/home/starship/gruvbox-rainbow.toml";
+  starshipPath = "${config.home.homeDirectory}/nixos-config/home/starship/noctalia-managed.toml";
 
   in {
   programs.starship = {
