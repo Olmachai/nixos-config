@@ -1,5 +1,13 @@
-{ pkgs, config, inputs, ... }: {
+{ pkgs, config, inputs, override, ... }: 
 
+let 
+
+  davinci-resolve-main = pkgs.callPackage ./davinciResolve-main/package.nix { };
+
+in 
+{
+ 
+ 
   environment.systemPackages = with pkgs; [ 
     ristretto
     opencode
@@ -11,7 +19,7 @@
     prismlauncher
     vlc
     yt-dlp
-    #davinci-resolve
+    davinci-resolve-main
     docker
     docker-compose
     lutris
@@ -49,5 +57,5 @@
   programs.steam = {
     enable = true;
   };
-   
+
 }

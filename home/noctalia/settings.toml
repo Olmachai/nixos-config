@@ -60,7 +60,7 @@ border_width = 2.5
 enabled = true
 radius = 0
 reserve_space = false
-shadow = false
+shadow = true
 
 [lockscreen_widgets]
 enabled = false
