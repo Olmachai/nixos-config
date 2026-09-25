@@ -17,7 +17,10 @@
   };
   boot.kernelPackages = pkgs.linuxPackages_zen;
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.ly = {
+    enable = true;
+    x11Support = true;
+  };
 
   time.timeZone = "Europe/Istanbul";
 

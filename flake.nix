@@ -27,7 +27,7 @@
         ./modules/sway/sway.nix
         #Import For Niri (Import the recommended modules below for full functionality)
         ./modules/niri/niri.nix
-        #Import For OXWM
+        #Import For OXWM (Doesn't work rn)
         #./modules/oxwm/oxwm.nix
         
         #RECOMMENDED IMPORTS
