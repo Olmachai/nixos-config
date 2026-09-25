@@ -3,13 +3,7 @@
 {
   
   imports = [ 
-    ./modules/hardware/nvidia.nix
-    ./modules/hardware/networking.nix
-    ./modules/sway/sway.nix
-    ./modules/pkgs.nix
-    ./modules/users.nix
-    ./modules/noctalia/noctalia.nix
-    ./modules/niri/niri.nix
+
   ]; 
 
   programs.nix-ld.enable = true;
@@ -49,14 +43,6 @@
     enable = true;
     powerOnBoot = false;
   };
-
-  services.xserver.enable = false;
-
-    # Configure keymap in X11
-    services.xserver.xkb = {
-      layout = "tr";
-      variant = "";
-    };
 
   console.keyMap = "trq";
 
