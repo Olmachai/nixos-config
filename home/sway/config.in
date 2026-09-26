@@ -12,7 +12,24 @@ set $filemanager thunar
 
 ### Window Rules
 for_window [title="Noctalia Settings"] floating enable;
-for_window [title="Thunar"] floating enable;
+
+for_window [title="Thunar"] \
+floating enable, \
+resize set width 960, \
+resize set height 540
+
+for_window [title="Picture-in-Picture"] \
+floating enable, \
+resize set width 480, \
+resize set height
+
+# Idk why this needs to be seperated, only works like this.
+# Add/Remove the outer gap ammounts from the x nad y values for gap margine.
+for_window [title="Picture-in-Picture"] \
+move position 1420 755, \
+sticky enable
+
+
 
 font pango:ZedMono Nerd Font Bold 11
 

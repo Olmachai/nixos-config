@@ -30,11 +30,11 @@
       enable = true;
       settings = {
         screencast = {
-             chooser_type = "simple";
-             chooser_cmd = "${pkgs.slurp}/bin/slurp -f 'Monitor: %o'";
-           };
+             chooser_type = "dmenu";
+             chooser_cmd = "${pkgs.wmenu}/bin/wmenu -i -p 'Share window or monitor: '";
        };
     };
+  };
     config.sway = {
       default = [ "gtk" ];
       "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
@@ -52,6 +52,8 @@
    environment.systemPackages = with pkgs; [
    wlsunset   
    slurp
+   bemenu
+   wmenu
  ];
   # services.displayManager.sessionPackages = [ pkgs.sway ];    
 }
