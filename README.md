@@ -29,7 +29,7 @@ environment.systemPackages = with pkgs; [
 Then, run 
 ```
 
-sudo nixos-rebuild --switch
+sudo nixos-rebuild switch
 
 ```
 for the changes to take effect.
