@@ -11,6 +11,44 @@ Sway-Kanagawa
 Sway-Gruvbox Dark
 <img width="1920" height="1080" alt="screenshot_20260917_005702-region" src="https://github.com/user-attachments/assets/b2254d5c-5f93-4947-b613-56b2a9aaa7f9" />
 
-## *Warning*
-**Make sure to edit the users.nix, flake.nix hardware-configuration.nix with your own username, hostname and hardware config before running:**
+## Installation Instructions
+### 1. Install Prep
+
+First, Install NixOS and add the following to your "/etc/nixos/confguration.nix" file.
+
+```
+
+nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+environment.systemPackages = with pkgs; [
+    git
+];
+
+```
+
+Then, run 
+```
+
+sudo nixos-rebuild --switch
+
+```
+for the changes to take effect.
+
+### 2. The Actual Installation
+Run
+```
+
+git clone https://github.com/Olmachai/nixos-config.git
+cd nixos-config
+cp /etc/nixos/hardware-configuration.nix .
+```
+
+Then, edit the "./modules/users.nix" file with your own username.
+
+Finally, run
+```
+
 sudo nixos-rebuild switch --flake .
+
+```
+and reboot your system.
